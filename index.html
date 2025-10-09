@@ -15,20 +15,20 @@
           <div class="product-container">
             <div class="product-image">
               <img v-bind:src="image"/>
-              <br>
-              <!-- Challgenge 2: Bind a url to the data object then bind it to an anchor tag's href attribute -->
-              <a v-bind:href="url">More products like this</a>
             </div>
             <div class="product-info">
-              <h2>Details</h2>
-              <h1>{{ product }}</h1>
+              <h1>Details</h1>
+              <h2>{{ product }}</h2>
               <!--Challenge 1: Add info about the product-->
-              <p> {{description}} </p>
+              <p> Description: {{description}} </p>
+              <!-- Challgenge 2: Bind a url to the data object then bind it to an anchor tag's href attribute -->
+              <a v-bind:href="url">More products like this</a>
               <p v-if="inventory > 10">In Stock</p>
               <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
               <p v-else>Out of Stock</p>
               <!-- Challgenge 3: Add an onSale boolean to the data object -->
               <p v-if="onSale">On Sale!</p>
+            
             </div>
           </div>
         </div>
