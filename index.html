@@ -23,7 +23,7 @@
               <h2>Details</h2>
               <h1>{{ product }}</h1>
               <!--Challenge 1: Add info about the product-->
-              <p> {{product_info}} </p>
+              <p> {{description}} </p>
               <p v-if="inventory > 10">In Stock</p>
               <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
               <p v-else>Out of Stock</p>
